@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { CategoryRepository } from "../repositories/CategoryRepository";
+import { CategoriesRepository } from "../repositories/CategoriesRepository";
 import { CreateCategoryService } from "../services/CategoryService";
 
 const categoriesRoutes = Router();
-const categoriesRepository = new CategoryRepository();
+const categoriesRepository = new CategoriesRepository();
 
 categoriesRoutes.get("/", (request, response) => {
   const all = categoriesRepository.list();
